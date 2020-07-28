@@ -55,11 +55,6 @@
 						placeholder="ユーザーID" 　	required>
 				</div>
 				<div class="mb-3">
-					<label for="password">パスワード</label> <input type="password"
-						class="form-control" id="password" name="password"
-						placeholder="パスワード" 　required>
-				</div>
-				<div class="mb-3">
 					<label for="name">氏名</label> <input type="text"
 						class="form-control" id="name" name="name" placeholder="氏名"
 						　required>
@@ -84,6 +79,9 @@
 					
 				<input type="submit" class="btn btn-secondary btn-block btn-lg"
 					id="enterRoom" value="変更せず戻る"></input>
+					
+				<a href="/ActionLoggerSample/passhen">パスワード変更はこちら</a>
+				
 		</div>
 		<div class="col"></div>
 
