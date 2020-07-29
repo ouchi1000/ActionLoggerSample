@@ -48,7 +48,7 @@
 		<div class="col-8">
 			<form class="form-adduser" action="/ActionLoggerSample/adduser"
 				method="post">
-				<h4 h3 mb-3 font-weight-normal>新規ユーザー</h4>
+				<h4 h3 mb-3 font-weight-normal>プロフィール変更</h4>
 				<div class="mb-3">
 					<label for="userid">ユーザーID</label> <input type="text"
 						class="form-control" id="userid" name="userid"
