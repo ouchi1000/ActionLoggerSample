@@ -49,12 +49,30 @@ public class LoginCheck extends HttpServlet {
 		// DBからユーザーを取得
 		UserDAO userDAO = new UserDAO();
 		User user = userDAO.get(req.getParameter("userid"));
-
-		// DBからの取得が成功 AND パスワードハッシュが合致
-		if (user != null && user.getPwdHash().equals(passwordHash)) {
-			HttpSession session = req.getSession();
-			session.setAttribute("userid", user.getUserId());
-			resp.sendRedirect("/ActionLoggerSample/");
+		
+		// DB(userID)からの取得が成功 AND パスワードハッシュが合致
+				if (user != null && user.getPwdHash().equals(passwordHash)) {
+					HttpSession session = req.getSession();
+					//getSessionから取り出す
+					//ID
+					session.setAttribute("userid", user.getUserId());
+					//名前
+					session.setAttribute("name", user.getName());
+					//住所
+					session.setAttribute("address",user.getAddress());
+					//電話番号
+					session.setAttribute("tel", user.getTel());
+					//メールアドレス
+					session.setAttribute("email",user.getEmail());
+					// setAttributeの説明
+					// リクエストに新しい属性名と属性値をセットすることが出来る
+					// session.setAttribute(“属性名(String型)”, “属性値（Object型）”);
+					session.setAttribute("userid", user.getUserId());
+					// sendRedirectの説明
+					// 何かの処理をしてエラーだった場合にはエラーページへ飛ばす、
+					// データベースの処理だけをするサーブレットを呼び出した後に処理が終わったらサーブレットでは何も出力を行わずに特定のページへ飛ばす
+					// 別のサーバにあるURLへ飛ばす（ActionLoggerへ）
+					resp.sendRedirect("/ActionLoggerSample/");
 
 		} else {
 			// TODO ログインエラーにリダイレクト

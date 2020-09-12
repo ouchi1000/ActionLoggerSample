@@ -72,27 +72,20 @@
 				%>
 				<jsp:include page="/WEB-INF/jsp/activities.jsp" />
 				<%
-					} else {
+					} else if(view != null && view.equals("profilekakuninn")){
 				%>
-				<jsp:include page="/WEB-INF/jsp/dashboard.jsp" />
+				<jsp:include page="/WEB-INF/jsp/profilekakuninn.jsp" />
 				<%
-					} 
+					} else if(view != null && view.equals("addActionForm")){
 				%>
-				
-				<!--  
-				<!-- こっから追加したところ　あんま意味ない -->
-				<%
-					if (view != null && view.equals("toroku")) {
-				%>
-				<jsp:include page="/WEB-INF/jsp/toroku.jsp" />
+				<jsp:include page="/WEB-INF/jsp/addActionForm.jsp" />
 				<%
 					} else {
 				%>
 				<jsp:include page="/WEB-INF/jsp/dashboard.jsp" />
 				<%
-					} 
+					}
 				%>
-				-->
 			</main>
 		</div>
 	</div>

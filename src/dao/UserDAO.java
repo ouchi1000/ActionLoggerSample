@@ -11,7 +11,7 @@ import model.User;
 //DB上のuserテーブルに対応するDAO
 public class UserDAO {
 	// データベース接続に使用する情報
-	private final String JDBC_URL = "jdbc:h2:tcp://localhost/~/h2db/actionloggersample";
+	private final String JDBC_URL = "jdbc:h2:tcp://localhost/~/h2db/ActionLoggerSample";
 	private final String DB_USER = "sa";
 	private final String DB_PASS = "";
 
@@ -65,7 +65,7 @@ public class UserDAO {
 			pStmt.setString(4, user.getAddress());
 			pStmt.setString(5, user.getTel());
 			pStmt.setString(6, user.getEmail());
-
+			
 			// INSERT文を実行
 			int result = pStmt.executeUpdate();
 			if (result != 1) {

@@ -51,13 +51,13 @@
 				<div class="mb-3">
 					<label for="userid">ユーザーID</label> <input type="text"
 						class="form-control" id="userid" name="userid"
-						placeholder="ユーザーID" 　	required>
+						placeholder="ユーザーID" 	required>
 					<div class="invalid-feedback">必須</div>
 				</div>
 				<div class="mb-3">
 					<label for="password">パスワード</label> <input type="password"
 						class="form-control" id="password" name="password"
-						placeholder="パスワード" 　required>
+						placeholder="パスワード" required>
 					<div class="invalid-feedback">必須</div>
 				</div>
 				<div class="mb-3">
@@ -83,6 +83,7 @@
 				</div>
 				<input type="submit" class="btn btn-secondary btn-block btn-lg"
 					id="enterRoom" value="登録"></input>
+					</form>
 		</div>
 		<div class="col"></div>
 
